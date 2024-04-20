@@ -20,52 +20,56 @@
 </head>
 
 <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-        <a class="navbar-brand grow" href="#">ReturnRight</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <a class="navbar-brand grow" href="/index.html">ReturnRight</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
             <li class="nav-item grow">
-              <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle grow" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Lost
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropdownmenuitems">
+                    <a class="dropdown-item" href="lostForm.html" id="dropdownitemslist">Report Lost Item</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="lostitems.html" id="dropdownitemslist">Lost Items</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle grow" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Found
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropdownmenuitems">
+                    <a class="dropdown-item" href="foundForm.html" id="dropdownitemslist">Report Found
+                        Item</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="founditems.html" id="dropdownitemslist">Found Items</a>
+                </div>
             </li>
             <li class="nav-item grow">
-              <a class="nav-link" href="forms/lostForm.html">Lost</a>
+                <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+
+            <li class="nav-item grow">
+                <a class="nav-link" href="contactus.html">Contact Us</a>
             </li>
             <li class="nav-item grow">
-              <a class="nav-link" href="forms/foundForm.html">Found</a>
+                <a class="nav-link" href="login.html">Login/Register</a>
             </li>
-            <li class="nav-item grow">
-              <a class="nav-link" href="#">Lost Items</a>
-            </li>
-            <li class="nav-item grow">
-              <a class="nav-link" href="#">Found Items</a>
-            </li>
-            <li class="nav-item grow">
-              <a class="nav-link" href="forms/aboutus.html">About Us</a>
-            </li>
-  
-            <li class="nav-item grow">
-              <a class="nav-link" href="forms/contactus.html">Contact Us</a>
-            </li>
-            <li class="nav-item grow">
-              <a class="nav-link" href="forms/login.html">Login/Register</a>
-            </li>
-          </ul>
-  
-          
-        </div>
-      </nav>
+        </ul>
+
+
+    </div>
+</nav>
     <main>
         <section>
             <div class="container" id="main-container">

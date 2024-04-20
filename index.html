@@ -59,7 +59,7 @@
 
   <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-      <a class="navbar-brand grow" href="#">ReturnRight</a>
+      <a class="navbar-brand grow" href="index.html">ReturnRight</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -77,17 +77,25 @@
           <li class="nav-item grow">
             <a class="nav-link" href="#">Home</a>
           </li>
-          <li class="nav-item grow">
-            <a class="nav-link" href="forms/lostForm.html">Lost</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle grow" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lost
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropdownmenuitems">
+              <a class="dropdown-item" href="forms/lostForm.html" id="dropdownitemslist">Report Lost Item</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="forms/lostitems.html" id="dropdownitemslist">Lost Items</a>
+            </div>
           </li>
-          <li class="nav-item grow">
-            <a class="nav-link" href="forms/foundForm.html">Found</a>
-          </li>
-          <li class="nav-item grow">
-            <a class="nav-link" href="#">Lost Items</a>
-          </li>
-          <li class="nav-item grow">
-            <a class="nav-link" href="#">Found Items</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle grow" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Found
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropdownmenuitems">
+              <a class="dropdown-item" href="forms/foundForm.html" id="dropdownitemslist">Report Found Item</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="forms/founditems.html" id="dropdownitemslist">Found Items</a>
+            </div>
           </li>
           <li class="nav-item grow">
             <a class="nav-link" href="forms/aboutus.html">About Us</a>
@@ -121,11 +129,8 @@
           <h1 class="got-lost-heading mb-3">GOT LOST</h1>
 
           <p>
-            Something lost it's way and came to you just to show the world how
-            honest you are!
-          </p>
-          <p class="mb-5">
-            Or if you've lost something just chill! People here are damnnn cool!
+            Something got misplaced and ended up with you—all to show the world how honest you are!
+            Or, if something is missing, simply unwind! These people are truly amazing!
           </p>
           <div class="shrink">
             <a class="learn-more" href="forms/register.html">Register Now</a>
@@ -142,11 +147,11 @@
       </section>
       <section class="discovery-col-ak section-2">
         <div class="container">
-          <div class="img col-lg-6 col-md-6 col-12 w-50 pt-5 pb-5">
+          <div class="img col-lg-6 col-md-6 col-12 w-50 pt-5 pb-5 ml-5">
             <img
               src="images/community.png"
               alt="image"
-              class="img-fluid border-top-20"
+              class="img-fluid border-top-30"
             />
           </div>
           <div class="text col-lg-6 col-md-6 col-12 w-50 pt-5 pb-5">
@@ -156,19 +161,12 @@
             </h2>
 
             <p class="mb-5">
-              We try to reduce students stress somewhat by heping them if they
-              lost something precious on the college/hostle grounds. <br />
-              There are two sections where you can go to one is the
-              <b><a href="forms/lostForm.html">LOST</a></b> section and the
+              We assist students who have misplaced something valuable on college in an effort to ease some of their stress.
+              There are two sections that you can visit: the
+              </b> section and the
               other is the
-              <b><a href="forms/foundForm.html">FOUND</a></b> section. You can
-              inform other people about what precious belonging you’ve lost and
-              ask your fellow students for help and if you’ve found something
-              then you can be of help to somebody else. Both the sections have
-              their respective instructions. <br />
-              And the faculty involvement in this procedure is about nill, so it
-              also helps in creating a strong bond between the kids and also to
-              maintain transparency.
+              <b><a href="forms/foundForm.html">FOUND</a></b> section and the <b><a href="forms/lostForm.html">LOST</a></b> You can ask your fellow students for assistance and let others know what valuable item you lost. If you find something, you can also aid someone else. Each part has instructions specific to it.
+              Additionally, since there are no staff members involved in this process, it contributes to maintaining transparency and strengthening the bonds amongst the children.
             </p>
             <div class="shrink d-inline-block">
               <a class="learn-more px-5" href="about_us.html">Learn More</a>
@@ -176,6 +174,7 @@
           </div>
         </div>
       </section>
+      
       <section class="service section-3">
         <div class="col mx-auto align-items-center pt-5">
           <div class="heading text-center mb-5 pt-3">
@@ -185,89 +184,48 @@
                 <hr />
               </div>
             </h2>
-          </div>
-          <div
-            class="d-flex flex-row-reverse justify-content-between container"
-          >
-            <div class="card-image w-50 col-lg-6 col-md-3 col-12 text-right">
-              <img class="img-fluid w-100" src="images/lost-card.png" alt="" />
-            </div>
-            <div
-              class="
-                one
-                col-lg-6 col-md-3 col-12
-                w-50
-                m-2
-                align-items-center
-                lost-found-card
-              "
-            >
-              <h5 class="card-title">Lost</h5>
-              <ul class="my-3">
-                <li class="text-left mb-3">
-                  Only the property lost on College or Hostel can be reported.
-                </li>
-                <li class="text-left mb-3">
-                  Maximum time for filing any lost report should be 2 days.
-                </li>
-                <li class="text-left mb-3">
-                  Try to be as much detailed as you can be.
-                </li>
-                <li class="text-left mb-5">
-                  Head towards the form below if you have lost your property.
-                </li>
-              </ul>
-
-              <div class="shrink">
-                <a class="learn-more px-5" href="forms/lostForm.html">Next</a>
-              </div>
-            </div>
-          </div>
-          <div
-            class="d-flex flex-row justify-content-between container mt-5 pb-5"
-          >
-            <div class="card-image w-50 col-lg-6 col-md-3 col-12 text-left">
-              <img class="img-fluid w-100" src="images/found-card.png" alt="" />
-            </div>
-            <div
-              class="
-                one
-                col-lg-6 col-md-3 col-12
-                w-50
-                m-2
-                align-items-center
-                lost-found-card
-              "
-            >
-              <h5 class="card-title">Found</h5>
-              <ul class="my-3">
-                <li class="text-left mb-3">
-                  Below is the form, if you've found a lost property on
-                  college/hostel.
-                </li>
-                <li class="text-left mb-3">
-                  Please try to report as soon as possible so that you can help
-                  someone in need.
-                </li>
-                <li class="text-left mb-3">
-                  The involvement of faculty will be kept as minimum as possible
-                  by our side, so that this might also help in student's ability
-                  to build connections.
-                </li>
-                <li class="text-left mb-5">
-                  If nobody comes forward for the property you found, only then
-                  the faculty will get involved.
-                </li>
-              </ul>
-
-              <div class="shrink">
-                <a class="learn-more px-5" href="forms/foundForm.html">Next</a>
-              </div>
-            </div>
-          </div>
-        </div>
+          
       </section>
-
+      <div class="rule1">
+        <div class="card1">
+          <div class="image1">
+            <img src="images/lost-card.png" alt="" />
+          </div>
+          <h5>Lost</h5>
+          <p>
+            Only the property lost on College can be reported.
+          </p>
+          <p>
+            Check found images before submitting the lost form.
+          </p>
+          <p>
+            Try to be as detailed as you can.
+          </p>
+          <p>
+            Head towards the form below if you have lost your property.
+          </p>
+          
+        </div>
+      
+        <div class="card1">
+          <div class="image1">
+            <img src="images/found-card.png" alt="" />
+          </div>
+          <h5>Found</h5>
+         
+          <p>
+            Please try to report as soon as possible so that you can help someone in need.
+          </p>
+          <p>
+            When reporting a found item, provide detailed information about where and when you found it.
+          </p>
+          <p>
+            Be honest and transparent in your report, and ensure the safekeeping of the found item until it can be returned to its rightful owner.
+          </p>
+          
+          
+        </div>
+      </div>
       <!-- RECENT RETURNS -->
 
       <section class="section-4">

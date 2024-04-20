@@ -250,3 +250,34 @@ img {
         overflow: hidden;
     }
 }
+.rule1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card1 {
+    background-color: #030027;
+    padding: 20px 70px;
+    margin: 10px;
+    border-radius: 10px;
+  text-align: center;
+    width: calc(50% - 20px);
+    max-width: 400px;
+  }
+  .image1 img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .card1 h5 {
+    font-size: 24px;
+    color: white;
+  }
+  .card1 p {
+list-style-type: disc;
+list-style: disc;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: left;
+  }

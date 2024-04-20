@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Found Items</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Tangerine"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lemon&family=Monoton&family=Montserrat:ital,wght@0,200;0,400;0,500;1,300&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- mdbootstrap -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="node_modules/mdbootstrap/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
+  <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css" />
+  <link rel="stylesheet" href="founditems.css">
+    <!--font Awesome ... for button icon-->
+    <script src="https://kit.fontawesome.com/9973cec642.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <a class="navbar-brand grow" href="/index.html">ReturnRight</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item grow">
+                <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle grow" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Lost
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropdownmenuitems">
+                    <a class="dropdown-item" href="lostForm.html" id="dropdownitemslist">Report Lost Item</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="lostitems.html" id="dropdownitemslist">Lost Items</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle grow" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Found
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropdownmenuitems">
+                    <a class="dropdown-item" href="foundForm.html" id="dropdownitemslist">Report Found
+                        Item</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="founditems.html" id="dropdownitemslist">Found Items</a>
+                </div>
+            </li>
+            <li class="nav-item grow">
+                <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+
+            <li class="nav-item grow">
+                <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+            <li class="nav-item grow">
+                <a class="nav-link" href="login.html">Login/Register</a>
+            </li>
+        </ul>
+
+
+    </div>
+</nav>
+      <h1 id="foundheading">Found Items Directory</h1>
+      <div class="dropdown" id="myfilter">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Filter By
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="mymenu">
+          <li><a href="#" onclick="filter('Electronics')">Electronics</a></li>
+          <li><a href="#" onclick="filter('Keys')">Keys</a></li>
+          <li><a href="#" onclick="filter('Books')">Books</a></li>
+          <li><a href="#" onclick="filter('Sports Items')">Sports Items</a></li>
+          <li><a href="#" onclick="filter('Stationery')">Stationery</a></li>
+          <li><a href="#" onclick="resetFilter()">Reset</a></li>
+        </ul>
+      </div>
+      
+      <div id="cardContainer" class="card-container">
+        <!-- Cards will be dynamically added here -->
+      </div>
+      <div id="formOverlay" class="form-overlay">
+        <div class="form-container">
+            <h2>Provide Your Details</h2>
+            <form id="detailsForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="proof">Proof</label>
+                <input type="file" name="proof" id="proof" accept="image/*" required >
+                <label for="describe">Features</label>
+                <textarea name="describe" id="describe" cols="40" rows="5"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <button id="closeForm" class="close-form-button">Close</button>
+        </div>
+    </div>
+
+      
+      <footer
+      class="text-center text-lg-start text-white"
+      style="background-color: #1c2331"
+      >
+      <!-- Section: Social media -->
+      <div class="socials-bar">
+      <section
+         class="d-flex justify-content-between p-4"
+         style="background-color: #6351ce"
+         >
+      <!-- Left -->
+      <div class="me-5">
+      <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+      
+      <!-- Right -->
+      <div>
+      <a href="" class="text-white me-4">
+      <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="text-white me-4">
+      <i class="fab fa-twitter"></i>
+     
+      <a href="" class="text-white me-4">
+      <i class="fab fa-instagram"></i>
+      </a>
+      
+      </div>
+      <!-- Right -->
+      </section>
+      </div>
+      <!-- Section: Social media -->
+      
+      <!-- Section: Links  -->
+      <section class="">
+      <div class=" text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <!-- Content -->
+        <h6 class="text-uppercase fw-bold">ReturnRight</h6>
+        <hr
+            class="mb-4 mt-0 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+            />
+        <p>
+            ReturnRight: Simplifying found item recovery for college students.</br>
+                    Find what's found with ReturnRight's intuitive campus solution. </br>
+        </p>
+      </div>
+      <!-- Grid column -->
+      
+      
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold">Useful links</h6>
+        <hr
+            class="mb-4 mt-0 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+            />
+        <p>
+          <a href="#!" class="text-white">found Items</a>
+        </p>
+        <p>
+          <a href="#!" class="text-white">Found Items</a>
+        </p>
+        <p>
+          <a href="#!" class="text-white">Login</a>
+        </p>
+        <p>
+          <a href="#!" class="text-white">found an Item</a>
+        </p>
+        <p>
+            <a href="#!" class="text-white">Found an Item</a>
+          </p>
+      </div>
+      <!-- Grid column -->
+      
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold">Contact</h6>
+        <hr
+            class="mb-4 mt-0 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+            />
+        <p><i class="fas fa-home mr-3"></i> Hyderabad, TS 500001, IN</p>
+        <p><i class="fas fa-envelope mr-3"></i> info@returnright.com</p>
+        <p><i class="fas fa-phone mr-3"></i> + 91 9959585325</p>
+        <p><i class="fas fa-print mr-3"></i> + 91 7901679016</p>
+      </div>
+      <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+      </div>
+      </section>
+      <!-- Section: Links  -->
+      
+      <!-- Copyright -->
+      <div
+      class="text-center p-3"
+      style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+      © 2020 Copyright:
+      <a class="text-white" href="https://returnright.com/"
+      >ReturnRight.com</a
+      >
+      </div>
+      <!-- Copyright -->
+      </footer>
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+<script>
+  function displayData(data, filter = null) {
+    const cardContainer = document.getElementById("cardContainer");
+    
+    // Clear previous data
+    cardContainer.innerHTML = "";
+  
+    data.forEach(item => {
+      // Check if the item matches the filter, if provided
+      if (!filter || item.category === filter) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+  
+        const image = document.createElement("img");
+        image.src = item.image;
+        image.alt = item.category;
+        card.appendChild(image);
+  
+        const cardBody = document.createElement("div");
+        cardBody.classList.add("card-body");
+  
+        const category = document.createElement("h5");
+        category.textContent = item.category;
+        cardBody.appendChild(category);
+  
+        const description = document.createElement("p");
+        description.textContent = item.description;
+        cardBody.appendChild(description);
+  
+        const foundDate = document.createElement("p");
+        foundDate.textContent = "found Date: " + item.foundDate;
+        cardBody.appendChild(foundDate);
+  
+        const location = document.createElement("p");
+        location.textContent = "Location: " + item.location;
+        cardBody.appendChild(location);
+  
+        // Create a "Lost" button
+        const lostButton = document.createElement("button");
+        lostButton.textContent = "Lost";
+        lostButton.classList.add("found-button");
+  
+        // Add an event listener to the "Lost" button
+        lostButton.addEventListener("click", function() {
+          // Show the form when the button is clicked
+          const foundForm = document.getElementById("formOverlay");
+          foundForm.style.display = "flex";
+          
+          // You can optionally prefill the form fields with item details
+          document.getElementById("name").value = item.description;
+          // Additional fields can be pre-filled similarly
+        });
+  
+        cardBody.appendChild(lostButton);
+  
+        card.appendChild(cardBody);
+        cardContainer.appendChild(card);
+      }
+    });
+  }
+  
+  // Handle filter clicks
+  function filter(category) {
+    displayData(data, category);
+  }
+  
+  // Handle reset filter click
+  function resetFilter() {
+    displayData(data);
+  }
+  
+  // Sample data
+  const data = [
+    { category: "Electronics", description: "Oneplus Nord Airpods", foundDate: "2024-04-15", location: "Library", image: "/images/airpods.jpg" },
+    { category: "Keys", description: "Car keys", foundDate: "2024-04-16", location: "Canteen", image: "/images/keys.jpg" },
+    { category: "Books", description: "Chemistry Record", foundDate: "2024-04-17", location: "Library", image: "/images/record.jpg" },
+    { category: "Sports Items", description: "Nivia Basketball", foundDate: "2024-04-18", location: "Gym", image: "/images/basketball.jpeg" },
+    { category: "Stationery", description: "Casio Calculator", foundDate: "2024-04-19", location: "C-205", image: "/images/calci.jpg" }
+    // Add more data objects here
+  ];
+  
+  // Initial display of all data
+  displayData(data);
+  
+  // Handle form submission
+  const form = document.getElementById("detailsForm");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    // Retrieve form data
+    const formData = new FormData(form);
+    
+    // Example: Send form data to backend endpoint
+    // Replace this with actual backend logic
+    console.log("Form submitted with data:", formData);
+    
+    // Show alert message
+    alert("Your details have been sent to the student who has found and please check your mail for further details. Please cooperate with them. Thank you!");
+    
+    // Hide the form after submission
+    const foundForm = document.getElementById("formOverlay");
+    foundForm.style.display = "none";
+  });
+
+  // Close form overlay
+  const closeFormButton = document.getElementById("closeForm");
+  closeFormButton.addEventListener("click", function() {
+    const foundForm = document.getElementById("formOverlay");
+    foundForm.style.display = "none";
+  });
+</script>
+
+    </script>
+  <!-- mdbootstrap -->
+  <script
+    type="text/javascript"
+    src="node_modules/mdbootstrap/js/jquery.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="node_modules/mdbootstrap/js/popper.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="node_modules/mdbootstrap/js/bootstrap.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="node_modules/mdbootstrap/js/mdb.min.js"
+  ></script>
+</body>
+</html>
