@@ -49,8 +49,7 @@ section {
 .section-1 {
     max-width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .section-1::before {
@@ -337,7 +336,7 @@ list-style: disc;
   .section-1,
   .section-2 {
     flex-direction: column; /* Adjust flex direction for sections */
-    text-align: center; /* Center align content */
+   
   }
 
   .img,
