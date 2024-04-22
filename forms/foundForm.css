@@ -145,3 +145,23 @@
         justify-content: center;
         align-items: center;
     }
+@media (max-width: 768px) {
+    /* Adjustments for tablets and smaller screens */
+    #form-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Adjustments for mobile devices */
+    #form-container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjustments for smaller mobile devices */
+    #form-container {
+        max-width: 90%;
+    }
+}
