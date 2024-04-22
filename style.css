@@ -285,13 +285,7 @@ list-style: disc;
   }
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-  .navbar-collapse {
-    background-color: #1c2331; /* Change background color of collapsed navbar */
-  }
-
-  .navbar-nav {
-    margin-top: 10px; /* Adjust margin for navbar links */
-  }
+  
 
   .container {
     padding: 0 15px; /* Adjust padding for containers */
@@ -327,13 +321,7 @@ list-style: disc;
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   /* Navbar */
-  .navbar-collapse {
-    background-color: #1c2331; /* Change background color of collapsed navbar */
-  }
-
-  .navbar-nav {
-    margin-top: 10px; /* Adjust margin for navbar links */
-  }
+  
 
   /* Sections */
   .section-1,
