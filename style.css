@@ -322,3 +322,37 @@ list-style: disc;
     color: black !important; /* Change icon color */
   }
 }
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar-collapse {
+    background-color: #1c2331; /* Change background color of collapsed navbar */
+  }
+
+  .navbar-nav {
+    margin-top: 10px; /* Adjust margin for navbar links */
+  }
+
+  /* Sections */
+  .section-1,
+  .section-2 {
+    flex-direction: column; /* Adjust flex direction for sections */
+    text-align: center; /* Center align content */
+  }
+
+  .img,
+  .text {
+    width: 100%; /* Make images and text full width */
+    margin: 0; /* Remove margin */
+  }
+
+  /* "Learn More" button */
+  .shrink {
+    text-align: center; /* Center align button */
+  }
+
+  .learn-more {
+    display: inline-block; /* Make button inline */
+    margin-top: 20px; /* Adjust margin */
+  }
+}
