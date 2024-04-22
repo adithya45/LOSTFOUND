@@ -13,7 +13,7 @@
     }
     
     .navbar .navbar-brand {
-        font-size: 2rem;
+        
         font-weight: 700;
         font-family: 'Monoton', cursive;
     }
@@ -268,3 +268,13 @@ footer {
     margin: 2rem 2rem 0 2rem;
 }
  */
+ @media (max-width: 768px) {
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: column;
+    }
+    .navbar-nav .nav-item {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+  

@@ -63,6 +63,8 @@ background-color: #f2f2f2;
 }
 #cardContainer{
 display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
 
 }
 #cardContainer .card{
@@ -254,7 +256,7 @@ display: flex;
 }
 
 .navbar .navbar-brand {
-  font-size: 2rem;
+  
   font-weight: 700;
   font-family: 'Monoton', cursive;
 }
@@ -281,3 +283,19 @@ ul li {
 #navbarSupportedContent>button:hover {
   background: rgb(22, 138, 113);
 }
+@media (max-width: 768px) {
+  /* Adjust card layout for screens smaller than 768px (typically mobile devices) */
+  #cardContainer .card {
+    width: 100%; /* Make each card take full width */
+  }
+}
+@media (max-width: 768px) {
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+  }
+  .navbar-nav .nav-item {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+

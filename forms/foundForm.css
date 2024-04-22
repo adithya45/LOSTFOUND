@@ -17,7 +17,7 @@
     }
     
     .navbar .navbar-brand {
-        font-size: 2rem;
+        
         font-weight: 700;
         font-family: 'Monoton', cursive;
     }
@@ -145,3 +145,48 @@
         justify-content: center;
         align-items: center;
     }
+    /* Styles for form and image */
+.image {
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+#form-container {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    /* Adjustments for tablets and smaller screens */
+    #form-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Adjustments for mobile devices */
+    #form-container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjustments for smaller mobile devices */
+    #form-container {
+        max-width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: column;
+    }
+    .navbar-nav .nav-item {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+  

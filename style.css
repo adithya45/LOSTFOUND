@@ -236,9 +236,6 @@ img {
 
 /* Responsiveness */
 @media (max-width:600px){
-    .container{
-        flex-direction: column;
-    }
     .section-3{
         display: flex;
         flex-direction: column;
