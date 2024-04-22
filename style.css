@@ -49,6 +49,8 @@ section {
 .section-1 {
     max-width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -91,6 +93,7 @@ h2 hr {
 
 .section-2 {
     max-width: 100%;
+    text-align:center;
 }
 
 .section-2 .container {
