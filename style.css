@@ -281,3 +281,44 @@ list-style: disc;
     margin-bottom: 10px;
     text-align: left;
   }
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #1c2331; /* Change background color of collapsed navbar */
+  }
+
+  .navbar-nav {
+    margin-top: 10px; /* Adjust margin for navbar links */
+  }
+
+  .container {
+    padding: 0 15px; /* Adjust padding for containers */
+  }
+
+  .section-1,
+  .section-2 {
+    flex-direction: column; /* Adjust flex direction for sections */
+  }
+
+  .img,
+  .text {
+    width: 100%; /* Make images and text full width */
+    margin: 0; /* Remove margin */
+  }
+
+  .text {
+    padding: 20px; /* Add padding to text */
+  }
+
+  .card1 {
+    width: 100%; /* Make cards full width */
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: white; /* Change control background color for better visibility */
+    color: black !important; /* Change icon color */
+  }
+}
