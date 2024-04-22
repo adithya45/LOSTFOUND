@@ -14,7 +14,7 @@
 }
 
 .navbar .navbar-brand {
-    font-size: 2rem;
+   
     font-weight: 700;
     font-family: 'Monoton', cursive;
 }
@@ -51,7 +51,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .section-1::before {
@@ -93,7 +92,6 @@ h2 hr {
 
 .section-2 {
     max-width: 100%;
-    text-align:center;
 }
 
 .section-2 .container {
@@ -263,7 +261,7 @@ img {
     margin: 10px;
     border-radius: 10px;
   text-align: center;
-    width: calc(50% - 20px);
+    
     max-width: 400px;
   }
   .image1 img {
@@ -283,66 +281,75 @@ list-style: disc;
     margin-bottom: 10px;
     text-align: left;
   }
-/* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .learn-more {
+        padding: 0.6rem 0.8rem; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+.section-3 .learn-more {
+    background: white;
+    color: #030027;
+}
+
+.section-3 .learn-more:hover {
+    background: #030027;
+    color: white;
+    border: 2px solid white;
+}
+
+/* Media query for smaller screens */
 @media (max-width: 768px) {
+    .section-3 .learn-more {
+        padding: 0.6rem 0.8rem; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+/* Media queries for navbar */
+@media (max-width: 768px) {
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: column;
+    }
+    .navbar-nav .nav-item {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
   
 
-  .container {
-    padding: 0 15px; /* Adjust padding for containers */
+/* Adjust layout for smaller screens */
+@media (max-width: 767px) {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+    }
+    .section-1 .container,
+    .section-2 .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .section-1 .text,
+    .section-1 .img,
+    .section-2 .img,
+    .section-2 .text {
+      width: 100%;
+    }
   }
-
-  .section-1,
-  .section-2 {
-    flex-direction: column; /* Adjust flex direction for sections */
-  }
-
-  .img,
-  .text {
-    width: 100%; /* Make images and text full width */
-    margin: 0; /* Remove margin */
-  }
-
-  .text {
-    padding: 20px; /* Add padding to text */
-  }
-
-  .card1 {
-    width: 100%; /* Make cards full width */
-  }
-}
-
-@media (max-width: 600px) {
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: white; /* Change control background color for better visibility */
-    color: black !important; /* Change icon color */
-  }
-}
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  /* Navbar */
   
-
-  /* Sections */
-  .section-1,
-  .section-2 {
-    flex-direction: column; /* Adjust flex direction for sections */
-   
+  /* Adjust layout for larger screens */
+  @media (min-width: 768px) {
+    .section-1 .container,
+    .section-2 .container {
+      display: flex;
+      flex-direction: row;
+    }
+    .section-1 .text,
+    .section-1 .img,
+    .section-2 .img,
+    .section-2 .text {
+      width: 50%;
+    }
   }
-
-  .img,
-  .text {
-    width: 100%; /* Make images and text full width */
-    margin: 0; /* Remove margin */
-  }
-
-  /* "Learn More" button */
-  .shrink {
-    text-align: center; /* Center align button */
-  }
-
-  .learn-more {
-    display: inline-block; /* Make button inline */
-    margin-top: 20px; /* Adjust margin */
-  }
-}
+  
