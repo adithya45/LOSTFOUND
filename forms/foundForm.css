@@ -145,3 +145,28 @@
         justify-content: center;
         align-items: center;
     }
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  /* Make the image full width */
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+  /* Ensure the image is visible on top of the form */
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image {
+    width: 100%;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+}
